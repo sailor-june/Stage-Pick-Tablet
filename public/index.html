@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<head>
+    <title>Stagelist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    
+<div class="stage-container">
+    <div class="starter-container">
+        <?php
+        $directory = "/Starters";
+        $files = scandir($dir);
+        
+        foreach ($files as $file) {
+            $path = $dir . '/' . $file;
+            if (is_file($path) && preg_match('/\.(jpg|jpeg|png|gif)$/', $file)) {
+              $images[] = $file;
+            }
+          }
+        foreach($images as $image){
+            echo '<div class="stage"><img src="'.$image.'" alt="'.$image.'"></div>';
+        }
+    ?>
+    </div>
+    <div class="counterpick-container">
+        <?php
+            $directory = "/Counterpicks";
+            $images = glob($directory . "/*.png");
+            foreach($images as $image){
+                echo '<div class="stage"><img src="'.$image.'" alt="'.$image.'"></div>';
+            }
+        ?>
+    </div>
+    <div class="reset-container">
+        <button id="reset-btn">Reset</button>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+
+</html>

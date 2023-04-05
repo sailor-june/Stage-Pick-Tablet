@@ -1,0 +1,27 @@
+{
+  "name": "stage-select-tablet",
+  "version": "1.0.0",
+  "description": "A OBS Websocket application to create tablets or GUI for streaming Stage Bans",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "OBS",
+    "SSBU",
+    "Stage",
+    "Bans"
+  ],
+  "author": "Ritual",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "@streamdasher/obs-websocket-js": "^5.0.2",
+    "express": "^4.18.2",
+    "npm": "^9.6.3",
+    "npx-server": "^0.0.47",
+    "path": "^0.12.7",
+    "php": "^1.0.2",
+    "touch-events": "^0.0.7",
+    "touch-events2": "^1.0.0"
+  }
+}
